@@ -38,7 +38,6 @@ const UserMenu = () => {
             <>
               <MenuItem onClick={() => {}} label="Login" />
               <MenuItem onClick={registerModal.onOpen} label="Sign Up" />
-              {/*  1 ORA 12 PERC*/}
             </>
           </div>
         </div>
