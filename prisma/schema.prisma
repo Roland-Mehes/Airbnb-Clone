@@ -18,7 +18,7 @@ model User {
   id String @id @default(auto()) @map("_id") @db.ObjectId
   name String?
   email String? @unique
-  emailVerified DateTime?
+  emailVerified DateTime? @default(now())
   image String?
   hashedPassword String?
   createdAt DateTime @default(now())
@@ -50,7 +50,7 @@ user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
 model Listing {
-  id String @id @default(auto()) @map("_id") @db.ObjectId
+id String @id @default(auto()) @map("_id") @db.ObjectId
 title String
 description String
 imageSrc String
@@ -58,7 +58,7 @@ createdAt DateTime @default(now())
 category String
 roomCount Int
 bathroomCount Int
-questCount Int
+guestCount Int
 locationValue String
 userId String @db.ObjectId
 price Int

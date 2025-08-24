@@ -1,3 +1,4 @@
+'use client';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useCallback } from 'react';
 import { IconType } from 'react-icons';
@@ -9,6 +10,11 @@ interface CategoryBoxProps {
   selected?: boolean;
 }
 
+interface QueryParamsProps {
+  category?: string;
+  [key: string]: string | string[] | undefined;
+}
+
 const CategoryBox: React.FC<CategoryBoxProps> = ({
   icon: Icon,
   label,
@@ -18,12 +24,12 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
   const params = useSearchParams();
 
   const handleClick = useCallback(() => {
-    let currentQuery = {};
+    let currentQuery: QueryParamsProps = {};
     if (params) {
-      currentQuery = qs.parse(params.toString());
+      currentQuery = qs.parse(params.toString()) as QueryParamsProps;
     }
 
-    const updatedQuery: any = {
+    const updatedQuery: QueryParamsProps = {
       ...currentQuery,
       category: label,
     };
