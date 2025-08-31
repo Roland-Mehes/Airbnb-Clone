@@ -1,4 +1,4 @@
-import { User } from '@prisma/client';
+import { User } from '@/app/generated/prisma';
 import { DefaultSession } from 'next-auth';
 
 export type SafeUser = Omit<

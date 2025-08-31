@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   /* config options here */
 
   images: {
-    remotePatterns: [new URL('https://avatars.githubusercontent.com/**')],
+    domains: ['res.cloudinary.com', 'https://avatars.githubusercontent.com/**'],
   },
 };
 
