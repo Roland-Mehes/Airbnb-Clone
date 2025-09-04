@@ -7,11 +7,16 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'res.cloudinary.com',
+        hostname: 'res.cloudinary.com', // Cloudinary host
       },
       {
         protocol: 'https',
-        hostname: 'avatars.githubusercontent.com/**',
+        hostname: 'avatars.githubusercontent.com', // GitHub avatar host
+      },
+      {
+        protocol: 'https',
+        hostname: 'lh3.googleusercontent.com', // Google avatar host
+        pathname: '/**',
       },
     ],
   },
