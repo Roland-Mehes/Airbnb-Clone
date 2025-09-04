@@ -4,7 +4,16 @@ const nextConfig: NextConfig = {
   /* config options here */
 
   images: {
-    domains: ['res.cloudinary.com', 'https://avatars.githubusercontent.com/**'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'avatars.githubusercontent.com/**',
+      },
+    ],
   },
 };
 
