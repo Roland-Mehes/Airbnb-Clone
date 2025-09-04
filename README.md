@@ -48,7 +48,6 @@ Graceful error handling and validation for a seamless user experience.
 
 - **Cloudinary**: Image hosting and management.
 - **Axios**: HTTP client for API requests.
-- **ESLint & Prettier**: Code linting and formatting.
 
 ---
 
