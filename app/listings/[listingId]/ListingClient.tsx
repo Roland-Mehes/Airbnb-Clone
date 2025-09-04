@@ -7,9 +7,8 @@ import { differenceInCalendarDays, eachDayOfInterval } from 'date-fns';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import useLoginModal from '@/app/hooks/useLoginModal';
-import { Reservation } from '@/app/generated/prisma';
 
-import { SafeListing, SafeUser } from '@/app/types';
+import { SafeListing, SafeReservation, SafeUser } from '@/app/types';
 import { categories } from '../../components/navbar/Categories';
 import Container from '@/app/components/Container';
 import ListingHead from '@/app/components/listings/ListingHead';
@@ -23,7 +22,7 @@ const initialDateRage = {
 };
 
 interface ListingClientProps {
-  reservations?: Reservation[];
+  reservations?: SafeReservation[];
   listing: SafeListing & { user: SafeUser };
   currentUser?: SafeUser | null;
 }
@@ -68,9 +67,9 @@ const ListingClient: React.FC<ListingClientProps> = ({
         listingId: listing?.id,
       })
       .then(() => {
-        router.push('/trips');
         toast.success('Listing reserved!');
         setDateRange(initialDateRage);
+        // router.push('/trips');
         router.refresh();
       })
       .catch(() => {
