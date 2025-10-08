@@ -9,6 +9,8 @@ import RentModal from './components/modals/RentModal';
 import SearchModal from './components/modals/SearchModal';
 import getCurrentUser from './actions/getCurrentUser';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata = {
   title: 'Airbnb',
   description: 'Airbnb clone',

@@ -5,7 +5,6 @@ import { BiSearch } from 'react-icons/bi';
 
 import { useSearchParams } from 'next/navigation';
 import useCountries from '@/app/hooks/useCountries';
-import { get } from 'http';
 import { differenceInDays } from 'date-fns';
 
 const Search = () => {
