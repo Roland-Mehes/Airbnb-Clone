@@ -23,7 +23,7 @@ A full-stack web application inspired by Airbnb, built with **Next.js**, **TypeS
 
 ---
 
-Visit the app at [http://localhost:3000](http://localhost:3000).
+Visit the app at [https://rentrise.vercel.app/](https://rentrise.vercel.app/).
 
 ---
 
